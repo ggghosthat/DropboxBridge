@@ -25,13 +25,13 @@ public class Authenticator {
     //This method try to authenticate user.
     // In right case it return a user full account.
     //In other case it return null-value
-    public FullAccount Authenticate() {
+    public DbxClientV2 Authenticate() {
         try {
             dropboxConfig = new DbxRequestConfig(this.clientIdentifier);
             clientV2 = new DbxClientV2(this.dropboxConfig, this.ACCESS_TOKEN);
             this.account = clientV2.users().getCurrentAccount();
             System.out.println("[AUTHENTICATED] - Account " + this.account.getName() + " have benn successfully authenticated.");
-            return this.account;
+            return this.clientV2;
         }
         catch (DbxException dbxException) {
             dbxException.printStackTrace();
