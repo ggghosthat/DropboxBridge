@@ -36,7 +36,7 @@ public class DirectoryWatcher {
             int indention = (space * space_count);
 
             for (Metadata metadata : result.getEntries()){
-                System.out.println(indention + "[METADATA] - " + metadata.getName() + "\n" + indention + '\t' + metadata.getPathLower());
+                System.out.println("[METADATA] - " + metadata.getName() + "\n\t" + metadata.getPathLower());
             }
 
             if(!result.getHasMore())
