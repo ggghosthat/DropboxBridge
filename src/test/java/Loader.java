@@ -133,7 +133,7 @@ public class Loader {
 
             //3) Finish
             long remaining = size - uploaded;
-            commitInfo = new CommitInfo().newBuilder(dbPath)
+            commitInfo = CommitInfo.newBuilder(dbPath)
                                 .withMode(WriteMode.ADD)
                     .withClientModified(new Date(file.lastModified()))
                     .build();
