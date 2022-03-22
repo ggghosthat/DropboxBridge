@@ -34,10 +34,10 @@ public class Authenticator {
             return this.clientV2;
         }
         catch (DbxException dbxException) {
-            dbxException.printStackTrace();
+            System.out.println("[ERROR-DROPBOX] - " + dbxException.getMessage());
         }
-        catch(Exception exception){
-            exception.printStackTrace();
+        catch(Exception ex){
+            System.out.println("[ERROR] - " + ex.getMessage());
         }
 
         return null;

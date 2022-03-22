@@ -36,10 +36,10 @@ public class Loader {
             }
         }
         catch(DbxException dbxException){
-            System.out.println("[ERROR-DROPBOX] - " + dbxException.getMessage());
+            dbxException.printStackTrace();
         }
         catch(Exception ex){
-            System.out.println("[ERROR] - " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
