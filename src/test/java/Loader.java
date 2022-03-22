@@ -25,12 +25,12 @@ public class Loader {
     private FileInputStream inputFileStream;
     private FileOutputStream outputFileStream;
 
+
+
+    //No-tested. Will not used on stable branch
     private long CHUNK_SIZE = 8L << 20; // 8MiB
-
     private ProgressListener progressListener;
-
     private UploadSessionCursor cursor;
-
     private CommitInfo commitInfo;
 
 
@@ -75,6 +75,8 @@ public class Loader {
         }
     }
 
+
+    //Chunked-uploading did not test. No-tested. Will not used on stable branch
     public void ChunkedUpload(String dbPath, String uploadPath, int attempts){
         try{
             File file = new File(uploadPath);
